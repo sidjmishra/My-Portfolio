@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Siddhant Mishra</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo_1.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1>Hi, I'm <span>Siddhant</span> <br> Mishra From India</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------- About ------------------------>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about">Myself Siddhant Mishra, CS graduate and currently working as a Senior Analyst at Capgemini Technology Services India Limited. I have experience working with Cloud Technologies & Application Development. Highlighting some of the works I did:-<br>
+                    Developing Android Applications (Android Java & Flutter), Implementing scalable Restful APIs, Developing web applications integrated with backend services.
+                    Continuously improving and upskilling myself and like to work in a team and face new challenges.</p>
+                    <div class="tab-tiles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>C++, C, Java, SQL, Python, Dart, JavaScript</li>
+                            <li><span>Web Development</span><br>HTML, CSS, PHP, Bootstrap</li>
+                            <li><span>Libraries/Frameworks</span><br>Flutter, Android(Java), Node.js, Express</li>
+                            <li><span>Tools/Platforms</span><br>Git, Postman, Google Firebase, MS Azure, Heroku, MySQL</li>
+                            <li><span>Operating System</span><br>Windows, Linux</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Capgemini Technology Services India Limited</span><br>Sr. Analyst/Software Engineer | September 2022 - Present</li>
+                            <li><span>Static. Int Educare</span><br>Software Developer & Instructore | April 2020 - August 2022</li>
+                            <li><span>VDoIT Technologies PVT LTD</span><br>IT Intern | October 2021 - November 2021</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>St. Francis Institute of Technology</span> | B.E. Computer Engineering <br>August 2019 - May 2022 | CGPA: 9.83/10.0</li>
+                            <li><span>Thakur Polytechnic</span> | Diploma in Computer Engineering <br>August 2016 - June 2019 | Percentage: 91.25%</li>
+                            <li><span>Sacred Heart Boys High School</span> | S.S.C <br>June 2015 - March 2016 | Percentage: 88.60%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------- Service ------------------------>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Application Development</h2>
+                    <p>Programming mobile applications using application frameworks like Android(Java), Flutter, etc.</p>
+                    <a href="https://www.outsystems.com/glossary/what-is-application-development/">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Application Prototype</h2>
+                    <p>An interactive mockup of mobile app. Working prototype with key user interfaces, screens, and simulated functions without any working code.</p>
+                    <a href="https://www.evertop.pl/en/what-is-an-application-prototyping-and-its-benefits/#:~:text=To%20put%20it%20simple%2C%20an,them%20later%20in%20the%20article).">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App/Web Hosting</h2>
+                    <p>Deploying app/web applications over cloud. Hosting everything from  blogs to dynamic websites in the cloud.</p>
+                    <a href="https://www.scalahosting.com/blog/what-is-the-best-hosting-for-web-and-mobile-apps/">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------- Portfolio ------------------------>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/spotify.jpg" alt="">
+                    <div class="layer">
+                        <h3>Spotify Connect</h3>
+                        <p>An application that recommends friends to the user with similar music tastes through the user's Spotify Profile. </p>
+                        <a href="https://github.com/sidjmishra/Friend-Suggestion-on-Music"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/bribe.png" alt="">
+                    <div class="layer">
+                        <h3>Bribery Reporting System</h3>
+                        <p>An application using the Flutter Framework through which users can report a bribe and manage reports.</p>
+                        <a href="https://github.com/sidjmishra/RK58_f0rk_society"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/internship.png" alt="">
+                    <div class="layer">
+                        <h3>Intern Connect</h3>
+                        <p>A personal internship portal where company can post internships and students can apply for it.</p>
+                        <a href="https://github.com/sidjmishra/Internship-Portal"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!------------------- Research Papers ---------------------->
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/chess.jpg" alt="">
+                    <div class="layer">
+                        <h3>Chess Mover Prediction</h3>
+                        <p>A system that play chess based on games played by chess professionals recorded in the data-set & on given game state of chess can predict & compete against players in chess games</p>
+                        <a href="https://github.com/hyp9820/ChessAI"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/ieee.png" alt="">
+                    <div class="layer">
+                        <h3>Chess Moves Prediction using Deep Learning Neural Networks</h3>
+                        <p>IEEE Research Paper | Published In: 2021 International Conference on Advances in Computing and Communications (ICACC)</p>
+                        <a href="https://ieeexplore.ieee.org/document/9708405"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/ieee.png" alt="">
+                    <div class="layer">
+                        <h3>Bribery and Justice Restoration System</h3>
+                        <p>IEEE Research Paper | Publish In: 2021 5th International Conference on Information Systems and Computer Networks (ISCON)</p>
+                        <a href="https://ieeexplore.ieee.org/document/9702500"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
