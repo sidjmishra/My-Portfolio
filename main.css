@@ -124,6 +124,7 @@ nav ul li a:hover::after {
     font-size: 40px;
     color: #fff;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .tab-tiles {
@@ -308,4 +309,91 @@ nav ul li a:hover::after {
 
 .btn:hover {
     background: #ff004f;
+}
+
+/********** Contact ***********/
+.contact-left {
+    flex-basis: 35%;
+    margin-top: 15px;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 20px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    margin-top: 30px;
+    display: inline-block;
+    background: #ff004f;
+    padding: 14px 40px;
+    font-size: 14px;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+form .btn.btn2 {
+    display: inline-block;
+    background: #ff004f;
+    padding: 14px 40px;
+    font-size: 14px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright i {
+    color: #ff004f;
 }
