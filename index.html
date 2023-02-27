@@ -6,26 +6,28 @@
     <title>Siddhant Mishra</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <!-- <script src='main.js'></script> -->
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo_1.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <img src="images/Siddhant.svg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Software Developer</p>
                 <h1>Hi, I'm <span>Siddhant</span> <br> Mishra From India</h1>
-                <a href="" class="btn" id="resume">Resume</a>
+                <!-- <a href="" class="btn" id="resume">Resume</a> -->
             </div>
         </div>
     </div>
@@ -182,12 +184,13 @@
                     <a href="" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form action="">
-                        <input type="text" name="name" placeholder="John Doe" required>
-                        <input type="email" name="email" placeholder="abc123@example.com" required>
-                        <textarea name="message" rows="5" placeholder="Type your message here"></textarea>
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="John Doe" required>
+                        <input type="email" name="Email" placeholder="abc123@example.com" required>
+                        <textarea name="Message" rows="5" placeholder="Type your message here"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -195,5 +198,6 @@
             <p>Copyright © Siddhant. Made with <i class="fas fa-heart"></i></p>
         </div>
     </div>
+    <script src='main.js'></script>
 </body>
 </html>
