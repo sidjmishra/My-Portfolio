@@ -1,89 +1,203 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.17.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.17.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Siddhant Mishra</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <!-- <script src='main.js'></script> -->
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Siddhant.svg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1>Hi, I'm <span>Siddhant</span> <br> Mishra From India</h1>
+                <!-- <a href="" class="btn" id="resume">Resume</a> -->
+            </div>
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <!-------------------- About ------------------------>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about">Myself Siddhant Mishra, CS graduate and currently working as a Senior Analyst at Capgemini Technology Services India Limited. I have experience working with Cloud Technologies & Application Development. Highlighting some of the works I did:-<br>
+                    Developing Android Applications (Android Java & Flutter), Implementing scalable Restful APIs, Developing web applications integrated with backend services.
+                    Continuously improving and upskilling myself and like to work in a team and face new challenges.</p>
+                    <div class="tab-tiles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>C++, C, Java, SQL, Python, Dart, JavaScript</li>
+                            <li><span>Web Development</span><br>HTML, CSS, PHP, Bootstrap</li>
+                            <li><span>Libraries/Frameworks</span><br>Flutter, Android(Java), Node.js, Express</li>
+                            <li><span>Tools/Platforms</span><br>Git, Postman, Google Firebase, MS Azure, Heroku, MySQL</li>
+                            <li><span>Operating System</span><br>Windows, Linux</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Capgemini Technology Services India Limited</span><br>Sr. Analyst/Software Engineer | September 2022 - Present</li>
+                            <li><span>Static. Int Educare</span><br>Software Developer & Instructore | April 2020 - August 2022</li>
+                            <li><span>VDoIT Technologies PVT LTD</span><br>IT Intern | October 2021 - November 2021</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>St. Francis Institute of Technology</span> | B.E. Computer Engineering <br>August 2019 - May 2022 | CGPA: 9.83/10.0</li>
+                            <li><span>Thakur Polytechnic</span> | Diploma in Computer Engineering <br>August 2016 - June 2019 | Percentage: 91.25%</li>
+                            <li><span>Sacred Heart Boys High School</span> | S.S.C <br>June 2015 - March 2016 | Percentage: 88.60%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------- Service ------------------------>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Application Development</h2>
+                    <p>Programming mobile applications using application frameworks like Android(Java), Flutter, etc.</p>
+                    <a href="https://www.outsystems.com/glossary/what-is-application-development/">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Application Prototype</h2>
+                    <p>An interactive mockup of mobile app. Working prototype with key user interfaces, screens, and simulated functions without any working code.</p>
+                    <a href="https://www.evertop.pl/en/what-is-an-application-prototyping-and-its-benefits/#:~:text=To%20put%20it%20simple%2C%20an,them%20later%20in%20the%20article).">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App/Web Hosting</h2>
+                    <p>Deploying app/web applications over cloud. Hosting everything from  blogs to dynamic websites in the cloud.</p>
+                    <a href="https://www.scalahosting.com/blog/what-is-the-best-hosting-for-web-and-mobile-apps/">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------- Portfolio ------------------------>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/spotify.jpg" alt="">
+                    <div class="layer">
+                        <h3>Spotify Connect</h3>
+                        <p>An application that recommends friends to the user with similar music tastes through the user's Spotify Profile. </p>
+                        <a href="https://github.com/sidjmishra/Friend-Suggestion-on-Music"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/bribe.png" alt="">
+                    <div class="layer">
+                        <h3>Bribery Reporting System</h3>
+                        <p>An application using the Flutter Framework through which users can report a bribe and manage reports.</p>
+                        <a href="https://github.com/sidjmishra/RK58_f0rk_society"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/internship.png" alt="">
+                    <div class="layer">
+                        <h3>Intern Connect</h3>
+                        <p>A personal internship portal where company can post internships and students can apply for it.</p>
+                        <a href="https://github.com/sidjmishra/Internship-Portal"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!------------------- Research Papers ---------------------->
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/chess.jpg" alt="">
+                    <div class="layer">
+                        <h3>Chess Mover Prediction</h3>
+                        <p>A system that play chess based on games played by chess professionals recorded in the data-set & on given game state of chess can predict & compete against players in chess games</p>
+                        <a href="https://github.com/hyp9820/ChessAI"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/ieee.png" alt="">
+                    <div class="layer">
+                        <h3>Chess Moves Prediction using Deep Learning Neural Networks</h3>
+                        <p>IEEE Research Paper | Published In: 2021 International Conference on Advances in Computing and Communications (ICACC)</p>
+                        <a href="https://ieeexplore.ieee.org/document/9708405"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/ieee.png" alt="">
+                    <div class="layer">
+                        <h3>Bribery and Justice Restoration System</h3>
+                        <p>IEEE Research Paper | Publish In: 2021 5th International Conference on Information Systems and Computer Networks (ISCON)</p>
+                        <a href="https://ieeexplore.ieee.org/document/9702500"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/sidjmishra/" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-------------------- Contact ------------------------>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>sidjmishra007@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>+91 99671 20351</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/siddhant-mishra-021726181/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/sidjmishra/"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://instagram.com/_siddhant._.mishra_?igshid=ZDdkNTZiNTM="><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/sidjmishra007"><i class="fab fa-twitter-square"></i></a>
+                    </div>
+                    <a href="" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="John Doe" required>
+                        <input type="email" name="Email" placeholder="abc123@example.com" required>
+                        <textarea name="Message" rows="5" placeholder="Type your message here"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Siddhant. Made with <i class="fas fa-heart"></i></p>
+        </div>
+    </div>
+    <script src='main.js'></script>
+</body>
 </html>
